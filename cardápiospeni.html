@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massas Speni | Cardápio Digital Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="logo-box">
+                <img src="img/logo.jpg" alt="Logo Speni">
+            </div>
+        </div>
+        <h1>Massas geni</h1>
+        <p>Sabores artesanais com tradição desde sempre</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Gastronomia Premium</h2>
+            <p>Leve o melhor da Itália para sua casa.</p>
+        </div>
+    </section>
+
+    <section class="highlights-section">
+        <h3 class="highlights-title">Destaques da Casa</h3>
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <div class="highlight-frame"><div class="highlight-img-box"><img src="/img/lasanha .jpg" alt="Lasanha"></div></div>
+                <p>Lasanha Speni</p>
+            </div>
+            <div class="carousel-item">
+                <div class="highlight-frame"><div class="highlight-img-box"><img src="img/frango.jpg" alt="Frango Assado"></div></div>
+                <p>Frango Recheado</p>
+            </div>
+            <div class="carousel-item">
+                <div class="highlight-frame"><div class="highlight-img-box"><img src="img/rondele.jpg" alt="Rondele"></div></div>
+                <p>Rondele Especial</p>
+            </div>
+            <div class="carousel-item">
+                <div class="highlight-frame"><div class="highlight-img-box"><img src="img/torta.jpg" alt="Tortas"></div></div>
+                <p>Nossas Tortas</p>
+            </div>
+        </div>
+    </section>
+
+    <nav class="category-nav">
+        <div class="nav-container">
+            <button class="category-btn active" onclick="filter('todas')">Todas</button>
+            <button class="category-btn" onclick="filter('frescas')">Massas Frescas</button>
+            <button class="category-btn" onclick="filter('prontas')">Massas Prontas</button>
+            <button class="category-btn" onclick="filter('carnes')">Carnes & Assados</button>
+            <button class="category-btn" onclick="filter('frios')">Frios</button>
+            <button class="category-btn" onclick="filter('pizzas')">Massas de Pizza</button>
+            <button class="category-btn" onclick="filter('tortas-salgadas')">Tortas Salgadas</button>
+            <button class="category-btn" onclick="filter('doces')">Doces & Tortas</button>
+        </div>
+    </nav>
+
+    <main class="menu-wrapper">
+        <h2 class="section-title">Nosso Cardápio</h2>
+        <div class="product-grid" id="product-grid"></div>
+    </main>
+
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button onclick="toggleCart()" style="background:none; border:none; color:white; font-size:30px; cursor:pointer">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items"></div>
+        <div class="cart-footer">
+            <textarea id="obs" placeholder="Alguma observação?"></textarea>
+            <div class="total-box"><span>Total</span><span id="cart-total">R$ 0,00</span></div>
+            <button class="btn-finish" onclick="checkout()"><i class="fab fa-whatsapp"></i> Finalizar via WhatsApp</button>
+        </div>
+    </aside>
+
+    <div class="floating-actions">
+        <a href="https://www.instagram.com/massasgeni/" class="float-btn instagram-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5513997440012" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <div class="float-btn cart-toggle" onclick="toggleCart()"><i class="fas fa-shopping-basket"></i><span class="badge" id="cart-count">0</span></div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-bottom">&copy; 2026 Massas Speni.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
